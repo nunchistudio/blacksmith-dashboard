@@ -1,0 +1,32 @@
+import NextHead from 'next/head';
+
+import {
+  EuiFlexGroup, EuiFlexItem,
+  EuiSpacer,
+} from '@elastic/eui';
+
+import { Loading } from '@nunchistudio/blacksmith-eui';
+
+const Page = () => {
+  const meta = {
+    title: 'Network Error',
+  };
+
+  return (
+    <>
+      <NextHead>
+        <title>{meta.title} - Blacksmith</title>
+      </NextHead>
+
+      <EuiSpacer size="xl" />
+
+      <EuiFlexGroup gutterSize="xl" className="wrapped">
+        <EuiFlexItem grow={true}>
+          <Loading isLoading={false} statusCode={500} />
+        </EuiFlexItem>
+      </EuiFlexGroup>
+    </>
+  );
+};
+
+export default Page;

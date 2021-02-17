@@ -1,0 +1,52 @@
+{
+  "name": "@nunchistudio/blacksmith-dashboard",
+  "version": "0.15.0",
+  "description": "Blacksmith Dashboard, built-in every applications by default.",
+  "keywords": [
+    "blacksmith",
+    "data",
+    "etl", "elt",
+    "eui"
+  ],
+  "homepage": "https://nunchi.studio/blacksmith",
+  "bugs": {
+    "url": "https://github.com/nunchistudio/blacksmith-dashboard/issues",
+    "email": "support@nunchi.studio"
+  },
+  "license": "Apache-2.0",
+  "author": "nunchistudio",
+  "funding": "https://nunchi.studio/support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nunchistudio/blacksmith-dashboard"
+  },
+  "scripts": {
+    "dev": "next -p 8090",
+    "start": "next start -p $PORT",
+    "build": "next build",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@elastic/datemath": "~5.0.3",
+    "@elastic/eui": "~31.4.0",
+    "@nunchistudio/blacksmith-eui": "~1.0.0",
+    "axios": "~0.21.1",
+    "dotenv": "~8.2.0",
+    "moment": "~2.29.1",
+    "next": "~10.0.6",
+    "node-sass": "~5.0.0",
+    "null-loader": "~4.0.1",
+    "prop-types": "~15.7.2",
+    "react": "~17.0.1",
+    "react-dom": "~17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.12.10",
+    "@babel/plugin-proposal-class-properties": "~7.12.1",
+    "@babel/plugin-transform-runtime": "~7.12.1",
+    "@babel/preset-env": "~7.12.11",
+    "@babel/preset-react": "~7.12.10",
+    "babel-loader": "~8.2.2"
+  },
+  "private": true
+}
