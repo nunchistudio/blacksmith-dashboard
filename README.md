@@ -7,7 +7,7 @@ data engineering solution, on top of [Blacksmith](https://nunchi.studio/blacksmi
 
 The source code of this repository is compiled and exported to be the built-in
 dashboard of applications leveraging Blacksmith. It is only available when using
-the [Enterprise Edition](https://nunchi.studio/blacksmith/editions).
+the [Enterprise Edition](https://nunchi.studio/blacksmith/pricing).
 
 To make forks and customization as easy as possible, this repository is available
 as an open-source "template" repository.
