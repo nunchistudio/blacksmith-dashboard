@@ -19,7 +19,7 @@ const Page = (props) => {
   };
 
   const router = useRouter();
-  const event_id = router.query.id || '';
+  const event_id = router.query.event_id || '';
 
   if (!router.isReady) {
     return (

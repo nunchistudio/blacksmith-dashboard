@@ -7,7 +7,7 @@ import {
 } from '@elastic/eui';
 
 import {
-  Layout, Job,
+  Layout, Trigger,
   Loading,
 } from '@nunchistudio/blacksmith-eui';
 
@@ -15,11 +15,12 @@ import axios from '../../utils/axios';
 
 const Page = (props) => {
   const meta = {
-    title: 'Job',
+    title: 'Trigger',
   };
 
   const router = useRouter();
-  const job_id = router.query.job_id || '';
+  const source_name = router.query.source_name || '';
+  const trigger_name = router.query.trigger_name || '';
 
   if (!router.isReady) {
     return (
@@ -37,7 +38,7 @@ const Page = (props) => {
         <title>{meta.title} - Blacksmith</title>
       </NextHead>
 
-      <Layout activeKey="store" {...props}>
+      <Layout activeKey="sources" {...props}>
         <EuiFlexGroup gutterSize="xl" className="wrapped">
           <EuiFlexItem grow={true}>
             <EuiTitle size="m">
@@ -48,7 +49,7 @@ const Page = (props) => {
 
         <EuiSpacer size="xl" />
 
-        <Job axios={axios} job_id={job_id} {...props} />
+        <Trigger axios={axios} source_name={source_name} trigger_name={trigger_name} {...props} />
       </Layout>
     </>
   );

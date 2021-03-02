@@ -7,19 +7,19 @@ import {
 } from '@elastic/eui';
 
 import {
-  Layout, Source,
+  Layout, Destination,
   Loading,
 } from '@nunchistudio/blacksmith-eui';
 
-import axios from '../utils/axios';
+import axios from '../../utils/axios';
 
 const Page = (props) => {
   const meta = {
-    title: 'Source',
+    title: 'Destination',
   };
 
   const router = useRouter();
-  const source_name = router.query.name || '';
+  const destination_name = router.query.destination_name || '';
 
   if (!router.isReady) {
     return (
@@ -37,7 +37,7 @@ const Page = (props) => {
         <title>{meta.title} - Blacksmith</title>
       </NextHead>
 
-      <Layout activeKey="sources" {...props}>
+      <Layout activeKey="destinations" {...props}>
         <EuiFlexGroup gutterSize="xl" className="wrapped">
           <EuiFlexItem grow={true}>
             <EuiTitle size="m">
@@ -48,7 +48,7 @@ const Page = (props) => {
 
         <EuiSpacer size="xl" />
 
-        <Source axios={axios} source_name={source_name} {...props} />
+        <Destination axios={axios} destination_name={destination_name} {...props} />
       </Layout>
     </>
   );

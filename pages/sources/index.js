@@ -6,14 +6,14 @@ import {
 } from '@elastic/eui';
 
 import {
-  Layout, Destinations,
+  Layout, Sources,
 } from '@nunchistudio/blacksmith-eui';
 
-import axios from '../utils/axios';
+import axios from '../../utils/axios';
 
 const Page = (props) => {
   const meta = {
-    title: 'Destinations',
+    title: 'Sources',
   };
 
   return (
@@ -22,7 +22,7 @@ const Page = (props) => {
         <title>{meta.title} - Blacksmith</title>
       </NextHead>
 
-      <Layout activeKey="destinations" {...props}>
+      <Layout activeKey="sources" {...props}>
         <EuiFlexGroup gutterSize="xl" className="wrapped-tight">
           <EuiFlexItem grow={true}>
             <EuiTitle size="m">
@@ -33,7 +33,7 @@ const Page = (props) => {
 
         <EuiSpacer size="xl" />
 
-        <Destinations axios={axios} {...props} />
+        <Sources axios={axios} {...props} />
       </Layout>
     </>
   );
