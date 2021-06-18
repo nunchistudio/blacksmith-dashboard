@@ -36,8 +36,8 @@ $ npm run start
 ## Version compatibility
 
 This package follows the semantic versioning of [Blacksmith](https://github.com/nunchistudio/blacksmith)
-for major and minor versions. For example, the dashboard `v0.16.x` will be compatible
-with Blacksmith `v0.16.x`.
+for major and minor versions. For example, the dashboard `v0.18.x` will be compatible
+with Blacksmith `v0.18.x`.
 
 ## License
 
